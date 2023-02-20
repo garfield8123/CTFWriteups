@@ -1,5 +1,6 @@
 ## **Obedient Cat**
-```# cat flag ```
+```read man cat ```
+
 ## **Python Wrangling**
 ``` 
 # python ende.py -d flag.txt.en 
