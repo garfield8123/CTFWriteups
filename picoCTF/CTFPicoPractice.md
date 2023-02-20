@@ -27,18 +27,14 @@ chmod +x warm
 ## **Nice Netcat**
 ```
 nc mercury.picoctf.net 43239 >> flag.txt
-python3 -c "filename = 'flag.txt'  # replace with the name of your file
-lines = []
-
-with open(filename, 'r') as f:
+python3 -c "lines = []
+with open('flag.txt', 'r') as f:
     for line in f:
         lines.append(line.strip())
-
 text = ''
 for x in lines:
     text += chr(int(x))
-print(text)
-"
+print(text)"
 ```
 ## **Static ain't always noise**
 ```
@@ -141,4 +137,166 @@ python3 fixme2.py
 ```
 nc saturn.picoctf.net 51109
 python3 -c "print('picoCTF{gl17ch_m3_n07_' + chr(0x62) + chr(0x64) + chr(0x61) + chr(0x36) + chr(0x38) + chr(0x66) + chr(0x37) + chr(0x35) + '}')"
+```
+
+## **HashingjobApp**
+```
+echo "https://www.md5hashgenerator.com/"
+echo "copy the text from the quotes"
+nc saturn.picoctf.net 57689
+```
+
+## **PW Crack 1**
+```
+wget https://artifacts.picoctf.net/c/52/level1.py
+wget https://artifacts.picoctf.net/c/52/level1.flag.txt.enc
+echo "password is 1e1a"
+python3 level1.py
+```
+
+## **PW Crack 2**
+```
+wget https://artifacts.picoctf.net/c/18/level2.py
+wget https://artifacts.picoctf.net/c/18/level2.flag.txt.enc
+echo "password is:")
+python3 -c "print(chr(0x33) + chr(0x39) + chr(0x63) + chr(0x65))"
+python3 level2.py
+```
+
+## **PW Crack 3**
+``` 
+wget https://artifacts.picoctf.net/c/23/level3.py
+wget https://artifacts.picoctf.net/c/23/level3.flag.txt.enc
+wget https://artifacts.picoctf.net/c/23/level3.hash.bin
+python3 -c 'import hashlib
+def hash_pw(pw_str):
+    pw_bytes = bytearray()
+    pw_bytes.extend(pw_str.encode())
+    m = hashlib.md5()
+    m.update(pw_bytes)
+    return m.digest()
+correct_pw_hash = open("level3.hash.bin", "rb").read()
+pos_pw_list = ["6997", "3ac8", "f0ac", "4b17", "ec27", "4e66", "865e"]
+for x in pos_pw_list:
+    if (hash_pw(x) == correct_pw_hash):
+        print("password is:" +x)'
+python3 level3.py
+```
+
+## **PW Crack 4**
+```
+wget https://artifacts.picoctf.net/c/59/level4.py
+wget https://artifacts.picoctf.net/c/59/level4.flag.txt.enc
+wget https://artifacts.picoctf.net/c/59/level4.hash.bin
+python3 -c 'import hashlib
+def hash_pw(pw_str):
+    pw_bytes = bytearray()
+    pw_bytes.extend(pw_str.encode())
+    m = hashlib.md5()
+    m.update(pw_bytes)
+    return m.digest()
+correct_pw_hash = open("level4.hash.bin", "rb").read()
+pos_pw_list = ["158f", "1655", "d21e", "4966", "ed69", "1010", "dded", "844c", "40ab", "a948", "156c", "ab7f", "4a5f", "e38c", "ba12", "f7fd", "d780", "4f4d", "5ba1", "96c5", "55b9", "8a67", "d32b", "aa7a", "514b", "e4e1", "1230", "cd19", "d6dd", "b01f", "fd2f", "7587", "86c2", "d7b8", "55a2", "b77c", "7ffe", "4420", "e0ee", "d8fb", "d748", "b0fe", "2a37", "a638", "52db", "51b7", "5526", "40ed", "5356", "6ad4", "2ddd", "177d", "84ae", "cf88", "97a3", "17ad", "7124", "eff2", "e373", "c974", "7689", "b8b2", "e899", "d042", "47d9", "cca9", "ab2a", "de77", "4654", "9ecb", "ab6e", "bb8e", "b76b", "d661", "63f8", "7095", "567e", "b837", "2b80", "ad4f", "c514", "ffa4", "fc37", "7254", "b48b", "d38b", "a02b", "ec6c", "eacc", "8b70", "b03e", "1b36", "81ff", "77e4", "dbe6", "59d9", "fd6a", "5653", "8b95", "d0e5"]
+for x in pos_pw_list:
+    if (hash_pw(x) == correct_pw_hash):
+        print("password is:" +x)'
+python3 level4.py
+```
+## **PW Crack 5**
+``` 
+wget https://artifacts.picoctf.net/c/80/level5.py
+wget https://artifacts.picoctf.net/c/80/level5.flag.txt.enc
+wget https://artifacts.picoctf.net/c/80/level5.hash.bin
+wget https://artifacts.picoctf.net/c/80/dictionary.txt
+python3 -c 'import hashlib
+def hash_pw(pw_str):
+    pw_bytes = bytearray()
+    pw_bytes.extend(pw_str.encode())
+    m = hashlib.md5()
+    m.update(pw_bytes)
+    return m.digest()
+correct_pw_hash = open("level5.hash.bin", "rb").read()
+lines = []
+with open("dictionary.txt", "r") as f:
+    for line in f:
+        lines.append(line.strip())
+for x in lines:
+    if (hash_pw(x) == correct_pw_hash):
+        print("password is:" +x)'
+python3 level5.py
+```
+
+## **runme.py**
+```
+wget https://artifacts.picoctf.net/c/86/runme.py
+python3 runme.py
+```
+
+## **Serpentine**
+```
+wget https://artifacts.picoctf.net/c/93/serpentine.py
+echo "Add print_flag()"
+nano serpentine.py
+python3 serpentine.py
+```
+
+## **First Find**
+```
+wget https://artifacts.picoctf.net/c/552/files.zip
+unzip files.zip
+find files -name uber-secret.txt
+cat files/adequate_books/more_books/.secret/deeper_secrets/deepest_secrets/uber-secret.txt 
+```
+
+## **Big Zip**
+```
+wget https://artifacts.picoctf.net/c/555/big-zip-files.zip
+unzip big-zip-files.zip
+grep -rl "picoCTF" ./big-zip-files
+cat ./big-zip-files/folder_pmbymkjcya/folder_cawigcwvgv/folder_ltdayfmktr/folder_fnpfclfyee/whzxrpivpqld.txt
+```
+
+## **Based**
+``` 
+echo "https://www.rapidtables.com/convert/number/binary-to-ascii.html"
+echo "http://www.unit-conversion.info/texttools/octal/" 
+echo "https://www.rapidtables.com/convert/number/hex-to-ascii.html"
+nc jupiter.challenges.picoctf.org 15130.
+```
+
+## **Plubming**
+```
+nc jupiter.challenges.picoctf.org 14291 | grep "picoCTF"
+```
+
+## **mus1c**
+```
+wget https://jupiter.challenges.picoctf.org/static/c0863a3b0170d6dd176be3a595b4b75e/lyrics.txt
+cat lyrics.txt
+echo "https://codewithrockstar.com/online"
+echo "https://www.utilities-online.info/ascii-to-text"
+touch flag.txt
+python3 -c "lines = []
+with open('flag.txt', 'r') as f:
+    for line in f:
+        lines.append(line.strip())
+text = ''
+for x in lines:
+    text += chr(int(x))
+print('picoCTF{%s}'%(text))"
+```
+
+## **flag_shop**
+```
+wget https://jupiter.challenges.picoctf.org/static/dd28f0987f28c894f35d5d48564c3402/store.c
+echo "buffer overflow"
+echo " buy 999999999999999"
+nc jupiter.challenges.picoctf.org 44566
+```
+
+## **1_wanna_b3_a_r0ck5tar**
+```
+wget https://jupiter.challenges.picoctf.org/static/96904d361d61fada5bd2d13536706f9a/lyrics.txt
+echo "depreciated"
+echo "picoCTF{BONJOVI}"
 ```
