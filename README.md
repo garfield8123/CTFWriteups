@@ -13,8 +13,8 @@ Basic CTF Writeup I am using to reference in the future
 - [General Skills Category] (./picoCTF/CTFGeneralSkills.md) :heavy_check_mark: Completed
   - Centers on Linux Commands, but introduces basic binary exploitations, cryptogrpahy, and reverse engineering
   - Writeups based on the general skills category in PicoCTF: [here](https://play.picoctf.org/practice?category=5&page=1)
-### **TryHackMe Writuep Directory
+### **TryHackMe Writuep Directory**
 - Work in progress in completing these writeups
 
-## ** CTF Writeups Work In Progress
-###
+## **CTF Writeups Work In Progress**
+
