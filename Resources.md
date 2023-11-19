@@ -1,5 +1,9 @@
 ## **Common Commands**
 
+### **Common Username/password**
+- Username: root, admin, sysadmin, user, test
+- Password: password, password123, password1234, 1234
+
 ### **Nmap**
 ```bash
 nmap -v -A <ip-address> -p <port-range>
