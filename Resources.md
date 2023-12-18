@@ -23,7 +23,10 @@ gobuster dir --url <site> -w <wordlist>
 ```bash
 crunch <min> <max> <characters> -o <output.txt>
 
-# uses the login field as "" empty string and uses the passwords teh 3digits.txt until it finds a working password with the finds the http method being used pin code is submitted to login.php:pin=^PASS^ allows the passwords from 3digts.txt to be inputed then it looks for the string Access denied when the password fails and the port is 8000
-hydra -l '' -P 3digits.txt -f -v MACHINE_IP http-post-form "/login.php:pin=^PASS^:Access denied" -s 8000
+hydra -l '' -P <output.txt> -f -v MACHINE_IP http-post-form "<post-url>:<input_name>=^PASS^:<Error_Result>" -s <port_Name>
+
+cewl -d <depth_search> -m <mininum_len> -x <max_len> http://<ip-address> -w <output.txt>
+
+wfuzz -c -z file,<filename> -z file,<filename> --hs <string of error> -u <login_page_location> -d <username=FUZZ&password=FUZ2Z>
 ```
 [Hydra Cheatsheet](https://github.com/frizb/Hydra-Cheatsheet)
