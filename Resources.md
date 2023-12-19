@@ -32,7 +32,7 @@ wfuzz -c -z file,<filename> -z file,<filename> --hs <string of error> -u <login_
 [Hydra Cheatsheet](https://github.com/frizb/Hydra-Cheatsheet)
 
 
-### *Fancy things to do in Lunx**
+### **Fancy things to do in Lunx**
 ```bash
 cat <filename>
 
@@ -48,3 +48,11 @@ nl <filename>
 
 cut -d <delm_string> -f<col_#> <filename>
 ```
+
+### **SQL Injection**
+```sql
+<webiste>?age='; <SQL_INEJCTION_COMMAND> -- 
+```
+
+### **MSF VENOM**
+[msfvenom cheatsheet](https://github.com/frizb/MSF-Venom-Cheatsheet)
