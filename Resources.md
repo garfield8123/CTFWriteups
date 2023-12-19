@@ -30,3 +30,21 @@ cewl -d <depth_search> -m <mininum_len> -x <max_len> http://<ip-address> -w <out
 wfuzz -c -z file,<filename> -z file,<filename> --hs <string of error> -u <login_page_location> -d <username=FUZZ&password=FUZ2Z>
 ```
 [Hydra Cheatsheet](https://github.com/frizb/Hydra-Cheatsheet)
+
+
+### *Fancy things to do in Lunx**
+```bash
+cat <filename>
+
+less <filename>
+
+head -n <#_of_lines> <filename>
+
+tail -n <#_of_lines> <filename>
+
+wc -l <filename>
+
+nl <filename>
+
+cut -d <delm_string> -f<col_#> <filename>
+```
