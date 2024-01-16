@@ -1,3 +1,4 @@
+exclude: ["README.md", "template.md"]
 title : CTF Writeups
 tagline: Site containing garfield8123 CTF Writeups
 author :
