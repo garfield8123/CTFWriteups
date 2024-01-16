@@ -12,4 +12,4 @@ author :
 production_url : http://garfield8123.github.io/CTFWriteups
 BASE_PATH : http://garfield8123.github.io/CTFWriteups	
 
-markdown: kramdown
+markdown: GFM
