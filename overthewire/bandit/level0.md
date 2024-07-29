@@ -20,8 +20,7 @@ The goal of this level is for you to log into the game using SSH. The host to wh
 </detials>
 
 <detials>
-
-<summary>## **Level 0 Command**</summary>
+<summary>Level 0 Command</summary>
 ssh bandit0@bandit.labs.overthewire.org -p 2220 
 password bandit0
 </details>
