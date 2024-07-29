@@ -7,15 +7,15 @@ The goal of this level is for you to log into the game using SSH. The host to wh
 
 ## **Walkthrough**
 <details>
-- <summary> Perform a SSH (Secure Shell) Connection</summary>
+<summary> Perform a SSH (Secure Shell) Connection</summary>
     - Figure out how to connect to ssh host with ssh user bandit0
 </detials>
 <details>
-- <summary> Bandit uses port 2220 instead of port 22 </summary>
+<summary> Bandit uses port 2220 instead of port 22 </summary>
     - Figure out how to add a custom port to the ssh connection command
 </detials>
 <details>
-- <summary> Use the given password and connect to the server</summary>
+<summary> Use the given password and connect to the server</summary>
     - password: bandit0
 </detials>
 
