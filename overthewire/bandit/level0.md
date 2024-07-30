@@ -9,10 +9,12 @@ The goal of this level is for you to log into the game using SSH. The host to wh
 - Perform a SSH (Secure shell) Connection
     - Figure out how to connect to ssh host with ssh user bandit0
 - Bandit uses port 2220 instead of port 22 
-    - Figure out how to add a custom port to the ssh connection command
+    - Figure out how to add a eve port to the ssh connection command
 - Look through man ssh 
     - See how to add port to ssh 
 
-## **Level 0 Command**
+## **Level 0 Solution**
+``` shell
 ssh bandit0@bandit.labs.overthewire.org -p 2220 
+```
 password bandit0

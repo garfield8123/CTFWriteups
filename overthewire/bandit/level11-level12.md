@@ -2,3 +2,14 @@
 
 Bandit OverTheWire Level 12: [level 12](https://overthewire.org/wargames/bandit/bandit12.html)
 
+## **Level Goal**
+
+
+## **Walkthrough**
+
+
+## **Level12 Solution**
+
+
+## **Generated password for level12**
+
