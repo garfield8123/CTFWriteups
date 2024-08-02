@@ -10,7 +10,7 @@ The password for the next level is stored in a hidden file in the inhere directo
 - Figure out how to list all the files in a folder including hidden files 
 - View the file contents of a hidden file with .
 
-## **Level4 Solution**
+## **Level 4 Solution**
 ```shell
 ls
 cd inhere
@@ -19,5 +19,5 @@ cat ...Hiding-From-You
 ```
 
 
-## **Generated password for level4**
+## **Generated password for level 4**
 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ

@@ -8,12 +8,12 @@ The password for the next level is stored in a file called - located in the home
 ## **Walkthrough**
 - Figure out how to view the contents of a dashed filename
 
-## **Level2 Solution**
-``` shell
+## **Level 2 Solution**
+``` shell 
 cat < -
 # or
 cat ./-
 ```
 
-## **Generated password for level2**
+## **Generated password for level 2**
 password: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx

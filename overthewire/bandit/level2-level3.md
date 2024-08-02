@@ -8,12 +8,12 @@ The password for the next level is stored in a file called spaces in this filena
 ## **Walkthrough**
 - Figure out to view file contents if filename contains spaces
 
-## **Level3 Solution**
+## **Level 3 Solution**
 ```shell
 cat spaces\ in\ this\ filename
 #or
 cat "spaces in this filename"
 ```
 
-## **Generated password for level3**
+## **Generated password for level 3**
 MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
