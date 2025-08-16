@@ -1,17 +1,17 @@
 exclude: ["README.md", "template.md"]
 highlighter: rouge
 
-
-title : CTF Writeups
-author :
-  name : Garfield Yang
-  email : darkpanda8123@gmail.com
-  github : garfield8123
-  feedburner : nil
+title: "CTF Writeups"
+author:
+  name: Garfield Yang
+  email: darkpanda8123@gmail.com
+  github: garfield8123
 
 remote_theme: sighingnow/jekyll-gitbook
 
-production_url : http://garfield8123.github.io/CTFWriteups
-BASE_PATH : http://garfield8123.github.io/CTFWriteups	
+url: "https://garfield8123.github.io"
+baseurl: "/CTFWriteups"
 
-markdown: GFM
+markdown: kramdown
+kramdown:
+  input: GFM
