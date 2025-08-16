@@ -66,6 +66,10 @@ collections:
 
 ordered_collections:
   - posts
+  - overthewire
+  - picoCTF
+  - Resources
+  - TryHackMe
 
 page_width: 800px
 
