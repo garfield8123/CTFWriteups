@@ -9,8 +9,12 @@ author:
 
 remote_theme: sighingnow/jekyll-gitbook
 
-url: "https://garfield8123.github.io"
-baseurl: "/CTFWriteups"
+syntax_highlighter_style: colorful
+
+toc:
+    enabled: true
+    h_min: 1
+    h_max: 3
 
 markdown: kramdown
 kramdown:
